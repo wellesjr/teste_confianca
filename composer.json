@@ -1,0 +1,8 @@
+{
+  "name": "teste/confianca",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}
