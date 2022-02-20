@@ -1,13 +1,12 @@
 <?php
 
 namespace controller\utils;
-
-class View
+class Views
 {
 
     private static function getContentView($view)
     {
-        $file = __DIR__ . '../../views/modules/' . $view . '.php';
+        $file = __DIR__ . 'views/modules' . $view . '.html';
 
         return file_exists($file) ? file_get_contents($file) : '';
     }
@@ -22,11 +21,7 @@ class View
             return '{{' . $item . '}}';
         }, $keys);
 
-        // echo '<pre>';
-        // print_r($keys);
-        // '</pre>';
-        // exit;
-
         return str_replace($keys, array_values($vars), $contentView);
+        print_r($contentView);
     }
 }
