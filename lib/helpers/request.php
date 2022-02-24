@@ -1,6 +1,6 @@
 <?php
 
-namespace models\request;
+namespace lib\helpers;
 
 class Request
 {
@@ -29,9 +29,9 @@ class Request
         return $this->uri;
     }
 
-    public function geHeaders()
+    public function getheaders()
     {
-        return $this->headers;
+        return $this->header;
     }
     public function getQueryParams()
     {

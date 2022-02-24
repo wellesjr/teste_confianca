@@ -1,14 +1,46 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div id="app">
+    <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+            <div class="sidebar-header">
+                <div class="d-flex justify-content-between">
+                    <div class="page-heading">
+                        <span>Bem vindos</span>
+                    </div>
+                    <div class="toggler">
+                        <a href="#" class="sidebar-hide d-xl-none d-block"><i
+                                class="btn btn-sm btn-outline-primary">Menu</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <ul class="menu">
+                    <li class="sidebar-title">Menu</li>
 
-  <link rel="stylesheet" href="/lib/base.php" />
-  <link rel="stylesheet" href="views/dist/css/app.css" />
-  <link rel="stylesheet" href="views/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="views/dist/css/bootstrap-icons.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <title>Inicio</title>
-</head>
+                    <li class="sidebar-item active ">
+                        <a href="views/modules/home.html" class='sidebar-link'>
+                            <span>Início</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href='' class='sidebar-link'>
+                            <span>Cadastrar novo cliente</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item  ">
+                        <a href="editar_cadastro.php" class='sidebar-link'>
+                            <span>Editar Cadastro</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+        </div>
+    </div>
+    <div id="main">
+        <header class="mb-3">
+            <a href="#" class="burger-btn d-block d-xl-none">
+                <i class="btn btn-sm btn-outline-primary">Menu</i>
+            </a>
+        </header>

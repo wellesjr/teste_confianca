@@ -1,23 +1,15 @@
 <?php
 
-include 'controllers/utils/views.php';
-include 'controllers/pages/home_controller.php';
-include 'models/routers.php';
-include 'models/response.php';
-include 'models/request.php';
+include 'lib/helpers/routers.php';
 
-use models\response\Response;
-use models\routers\Router;
-use controller\pages\Home;
 
-define('URL', '/');
+use lib\helpers\Router;
+
+define('URL', 'http://localhost/sistema_de_cadastros');
 
 $obRouter = new Router(URL);
 
-$obRouter->get(
-    '/',
-    [function () {
-        return new Response(200, Home::getHome());
-    }]
-);
-$obRouter->run()->sendResponse();
+include __DIR__ . '/controllers/routes_controller.php';
+
+$obRouter->run()
+    ->sendResponse();
