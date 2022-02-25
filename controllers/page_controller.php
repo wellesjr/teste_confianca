@@ -2,8 +2,6 @@
 
 namespace controller;
 
-include 'lib/helpers/view.php';
-
 use lib\helpers\Views;
 
 class PageController

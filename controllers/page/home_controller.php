@@ -9,6 +9,9 @@ use lib\helpers\Views;
 use models\entity\Organization;
 use controller\PageController;
 
+    /* --------------------------------------------------------------------------------------------------------------------------------
+*                     Método responsavel por retornar o conteúdo da view da pagina Home
+--------------------------------------------------------------------------------------------------------------------------------*/
 class HomeController extends PageController
 {
     public static function getHome()

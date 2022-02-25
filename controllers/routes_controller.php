@@ -22,3 +22,7 @@ $obRouter->get('/novo', [function () {
 $obRouter->get('/editar', [function () {
     return new Response(200, EditarController::getEditar());
 }]);
+
+$obRouter->get('/cadastro/{idCadastro}/{acao}', [function ($idCadastro, $acao) {
+    return new Response(200, 'Cadastro ' . $idCadastro . ' - ' . $acao);
+}]);

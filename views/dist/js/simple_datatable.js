@@ -1250,10 +1250,10 @@
               header: !0,
               footer: !1,
               labels: {
-                placeholder: "Search...",
+                placeholder: "Pesquisar...",
                 perPage: "{select}",
                 noRows: "No entries found",
-                info: "Showing {start} to {end} of {rows} entries",
+                info: "Maostrando de {start} a {end} de {rows} cadastros encontrados",
               },
               layout: { top: "{select}{search}", bottom: "{info}{pager}" },
             };

@@ -6,6 +6,10 @@ use controller\PageController;
 use lib\helpers\Views;
 use models\entity\Organization;
 
+/* --------------------------------------------------------------------------------------------------------------------------------
+*                     Método responsavel por retornar o conteúdo da view da pagina Novo Cadastro
+--------------------------------------------------------------------------------------------------------------------------------*/
+
 class CadastroController extends PageController
 {
     public static function getNovo()

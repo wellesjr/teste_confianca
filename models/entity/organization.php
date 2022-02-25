@@ -8,3 +8,9 @@ class Organization
 
     public $novos = 5;
 }
+
+class Status
+{
+
+    public $status = 'active';
+}

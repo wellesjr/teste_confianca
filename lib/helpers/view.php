@@ -4,7 +4,13 @@ namespace lib\helpers;
 
 class Views
 {
+    private static $vars = [];
 
+
+    public static function init($vars = [])
+    {
+        self::$vars = $vars;
+    }
     private static function getContentView($view)
     {
         $file = __DIR__ . '/../../views/modules/' . $view . '.html';
@@ -14,6 +20,8 @@ class Views
     public static function render($view, $vars = [])
     {
         $contenrView = self::getContentView($view);
+
+        $vars = array_merge(self::$vars,$vars);
 
         $keys = array_keys($vars);
         $keys = array_map(function ($iten) {
