@@ -8,7 +8,6 @@ use \Closure;
 use \Exception;
 use \ReflectionFunction;
 use lib\helpers\Request;
-use Reflection;
 
 class Router
 {
@@ -24,7 +23,7 @@ class Router
 --------------------------------------------------------------------------------------------------------------------------------*/
     public function __construct($url)
     {
-        $this->request = new Request;
+        $this->request = new Request($this);
         $this->url     = $url;
         $this->setPrefix();
     }

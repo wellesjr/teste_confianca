@@ -19,10 +19,21 @@ $obRouter->get('/novo', [function () {
     return new Response(200, CadastroController::getNovo());
 }]);
 
-$obRouter->get('/editar', [function () {
-    return new Response(200, EditarController::getEditar());
+$obRouter->post('/novo', [function ($request) {
+    return new Response(200, CadastroController::insertCliente($request));
 }]);
 
-$obRouter->get('/cadastro/{idCadastro}/{acao}', [function ($idCadastro, $acao) {
-    return new Response(200, 'Cadastro ' . $idCadastro . ' - ' . $acao);
+$obRouter->get('/editar', [function ($request) {
+    return new Response(200, EditarController::insertCadastro($request));
 }]);
+
+
+
+
+
+/*
+*       Rota dinamica 
+*       $obRouter->get('/cadastro/{idCadastro}/{acao}', [function ($idCadastro, $acao) {
+*       return new Response(200, 'Cadastro ' . $idCadastro . ' - ' . $acao);
+*       }]);
+*/
