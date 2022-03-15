@@ -18,6 +18,7 @@ class EditarController extends PageController
 
         while ($obCadastros = $results->fetchObject(Cadastro::class)) {
             $cadastros .= Views::render('includes/cadastros', [
+                'id' => $obCadastros->id_cliente,
                 'nome' => $obCadastros->name_cliente,
                 'cpf' => $obCadastros->cpf_cliente,
                 'cidade' => $obCadastros->cidade_cliente,
@@ -36,11 +37,13 @@ class EditarController extends PageController
 --------------------------------------------------------------------------------------------------------------------------------*/
     public static function getEditar()
     {
+
         $content = Views::render('pages/editar', ['cadastros' => self::getEditItems()]);
+
         return parent::getPage('Editar Cadastro', $content);
     }
 
-    public static function insertCadastro($request)
+    public static function insertCadastro()
     {
         return self::getEditar();
     }

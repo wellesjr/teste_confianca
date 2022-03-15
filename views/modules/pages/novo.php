@@ -8,8 +8,7 @@
               <span>Bem vindos</span>
             </div>
             <div class="toggler">
-              <a href="#" class="sidebar-hide d-xl-none d-block"><i
-                  class="btn btn-sm btn-outline-primary">Fechar</i></a>
+              <a href="#" class="sidebar-hide d-xl-none d-block"><i class="btn btn-sm btn-outline-primary">Fechar</i></a>
             </div>
           </div>
         </div>
@@ -63,43 +62,37 @@
                       <div class="col-md-6 col-12">
                         <div class="form-group">
                           <label for="first-name-column">Nome Completo</label>
-                          <input type="text" id="first-name-column" class="form-control" placeholder="Nome Completo"
-                            name="name_cliente" required />
+                          <input type="text" id="first-name-column" class="form-control" placeholder="Nome Completo" name="name_cliente" required />
                         </div>
                       </div>
                       <div class="col-md-6 col-12">
                         <div class="form-group">
                           <label for="last-name-column">CPF</label>
-                          <input type="text" id="last-name-column" class="form-control" placeholder="CPF"
-                            name="cpf_cliente" required />
+                          <input type="text" id="last-name-column" class="form-control" placeholder="CPF" name="cpf_cliente" required />
                         </div>
                       </div>
                       <div class="col-md-6 col-12">
                         <div class="form-group">
                           <label for="city-column">Cidade</label>
-                          <input type="text" id="city-column" class="form-control" placeholder="Cidade"
-                            name="cidade_cliente" />
+                          <input type="text" id="city-column" class="form-control" placeholder="Cidade" name="cidade_cliente" />
                         </div>
                       </div>
                       <div class="col-md-6 col-12">
                         <div class="form-group">
                           <label for="country-floating">Estado</label>
-                          <input type="text" id="country-floating" class="form-control" name="estado_cliente"
-                            placeholder="Estado" />
+                          <input type="text" id="country-floating" class="form-control" name="estado_cliente" placeholder="Estado" />
                         </div>
                       </div>
                       <div class="col-md-6 col-12">
                         <div class="form-group">
                           <label for="company-column">Telefone</label>
-                          <input type="text" id="company-column" class="form-control" name="telefone_cliente"
-                            placeholder="Telefone" />
+                          <input type="text" id="company-column" class="form-control" name="telefone_cliente" placeholder="Telefone" />
                         </div>
                       </div>
                       <div class="col-md-6 col-12">
                         <div class="form-group">
                           <label for="email-id-column">E-mail</label>
-                          <input type="email" id="email-id-column" class="form-control" name="email_cliente"
-                            placeholder="E-mail" required />
+                          <input type="email" id="email-id-column" class="form-control" name="email_cliente" placeholder="E-mail" required />
                         </div>
                       </div>
                       <div class="col-12 d-flex justify-content-end">

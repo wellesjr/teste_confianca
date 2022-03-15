@@ -23,10 +23,13 @@ $obRouter->post('/novo', [function ($request) {
     return new Response(200, CadastroController::insertCliente($request));
 }]);
 
-$obRouter->get('/editar', [function ($request) {
-    return new Response(200, EditarController::insertCadastro($request));
+$obRouter->get('/editar', [function () {
+    return new Response(200, EditarController::insertCadastro());
 }]);
 
+$obRouter->post('/editar', [function () {
+    return new Response(200, EditarController::insertCadastro());
+}]);
 
 
 

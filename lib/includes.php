@@ -10,8 +10,6 @@ use lib\database\Database;
 
 Environment::load(__DIR__ . '/../');
 
-Database::config(getenv('DB_HOST'), getenv('DB_NAME'), getenv('DB_USER'), getenv('DB_PASS'), getenv('DB_PORT'));
-
 define('URL', getenv('URL'));
 
 Views::init(['URL' => URL]);

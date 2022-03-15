@@ -13,7 +13,7 @@ class Views
     }
     private static function getContentView($view)
     {
-        $file = __DIR__ . '/../../views/modules/' . $view . '.html';
+        $file = __DIR__ . '/../../views/modules/' . $view . '.php';
         return file_exists($file) ? file_get_contents($file) : '';
     }
 
@@ -21,7 +21,7 @@ class Views
     {
         $contenrView = self::getContentView($view);
 
-        $vars = array_merge(self::$vars,$vars);
+        $vars = array_merge(self::$vars, $vars);
 
         $keys = array_keys($vars);
         $keys = array_map(function ($iten) {

@@ -1252,8 +1252,8 @@
               labels: {
                 placeholder: "Pesquisar...",
                 perPage: "{select}",
-                noRows: "No entries found",
-                info: "Maostrando de {start} a {end} de {rows} cadastros encontrados",
+                noRows: "Nenhum cadastro encontrado",
+                info: "Mostrando de {start} a {end} de {rows} cadastros encontrados",
               },
               layout: { top: "{select}{search}", bottom: "{info}{pager}" },
             };

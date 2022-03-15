@@ -2,27 +2,12 @@
 
 namespace lib\database;
 
-use lib\Environment;
 use \PDO;
 use PDOException;
 
 class Database
 {
-    public static function config($dbhost, $dbname, $dbuser, $dbpass, $dbport)
-    {
 
-        define('DB_HOST', $dbhost);
-        define('DB_NAME', $dbname);
-        define('DB_USER', $dbuser);
-        define('DB_PASS', $dbpass);
-        define('DB_PORT', $dbport);
-    }
-
-    const DB_HOST = '127.0.0.1';
-    const DB_NAME = 'teste_confianca';
-    const DB_USER = 'root';
-    const DB_PASS = '743639';
-    const DB_PORT = '3306';
     private $connection;
     private $table;
 
@@ -36,7 +21,7 @@ class Database
     private function setConnection()
     {
         try {
-            $this->connection = new PDO('mysql:host=' . DB_HOST . ';dbname=' . self::DB_NAME, self::DB_USER, self::DB_PASS);
+            $this->connection = new PDO('mysql:host=' . getenv('DB_HOST') . ';dbname=' . getenv('DB_NAME'), getenv('DB_USER'), getenv('DB_PASS'));
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             die('ERROR:' . $e->getMessage());
@@ -79,7 +64,7 @@ class Database
 
 
     /* --------------------------------------------------------------------------------------------------------------------------------
-*                     Método responsavel por realizar consultar no banco de dados
+*                     Método responsavel por consultar no banco de dados
 --------------------------------------------------------------------------------------------------------------------------------*/
     public function select($where = null, $order = null, $limit = null, $fields = '*')
     {
@@ -91,5 +76,30 @@ class Database
         $query = 'SELECT ' . $fields . ' FROM ' . $this->table . ' ' . $where . ' ' . $order . ' ' . $limit;
 
         return $this->execute($query);
+    }
+
+    /* --------------------------------------------------------------------------------------------------------------------------------
+*                     Método responsavel por realizar update no banco de dados
+--------------------------------------------------------------------------------------------------------------------------------*/
+    public function update($where, $values)
+    {
+        $fields = array_keys($values);
+        $query = "UPDATE" . $this->table . "SET" . implode("=?," . $fields) . "=? WHERE" . $where;
+        echo $query;
+        exit;
+        $this->execute($query . array_values($values));
+        return true;
+    }
+
+
+
+    /* --------------------------------------------------------------------------------------------------------------------------------
+*                     Método responsavel por realizar delete no banco de dados
+--------------------------------------------------------------------------------------------------------------------------------*/
+    public function delete($where)
+    {
+        $query = "DELETE FROM" . $this->table . "WHERE" . $where;
+        $this->execute($query);
+        return true;
     }
 }
